@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A6038601CA0E2BA0088A686 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A60385F1CA0E2BA0088A686 /* Reachability.m */; };
 		2A9B6B9E1C8FA32700CDB560 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9B6B9D1C8FA32700CDB560 /* main.m */; };
 		2A9B6BA11C8FA32700CDB560 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9B6BA01C8FA32700CDB560 /* AppDelegate.m */; };
 		2A9B6BA71C8FA32700CDB560 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A9B6BA51C8FA32700CDB560 /* Main.storyboard */; };
@@ -66,6 +67,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A60385E1CA0E2BA0088A686 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		2A60385F1CA0E2BA0088A686 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		2A9B6B991C8FA32700CDB560 /* TabBar实例_QQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TabBar实例_QQ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A9B6B9D1C8FA32700CDB560 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2A9B6B9F1C8FA32700CDB560 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 		2A9B6B901C8FA32700CDB560 = {
 			isa = PBXGroup;
 			children = (
+				2A60385E1CA0E2BA0088A686 /* Reachability.h */,
+				2A60385F1CA0E2BA0088A686 /* Reachability.m */,
 				2A9B6C001C91205B00CDB560 /* 1.jpg */,
 				2A9B6C011C91205B00CDB560 /* 2.jpg */,
 				2A9B6C021C91205B00CDB560 /* 3.jpg */,
@@ -412,6 +417,7 @@
 			files = (
 				2A9B6BD41C8FA4F000CDB560 /* ContractViewController.m in Sources */,
 				2A9B6BD11C8FA4A600CDB560 /* MessageViewController.m in Sources */,
+				2A6038601CA0E2BA0088A686 /* Reachability.m in Sources */,
 				2A9B6BD71C8FA51C00CDB560 /* NewsViewController.m in Sources */,
 				2A9B6BFD1C91124A00CDB560 /* MyTableViewCell.m in Sources */,
 				2A9B6BA11C8FA32700CDB560 /* AppDelegate.m in Sources */,

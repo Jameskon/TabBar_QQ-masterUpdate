@@ -10,6 +10,7 @@
 #import "NewsViewController.h"
 #import "ContractViewController.h"
 #import "MessageViewController.h"
+#import "Reachability.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +18,43 @@
 
 @implementation AppDelegate
 
+- (NSString *)networkStatusWith:(NetworkStatus)status
+{
+    //    NotReachable = 0,  无网络连接
+    //    ReachableViaWiFi,  网络可用 wifi连接
+    //    ReachableViaWWAN   网络可用 2G/3G/4G数据连接
+    switch(status)
+    {
+        case 0:
+        {
+            return @"NotReachable = 0,  无网络连接";
+        }
+            break;
+        case 1:
+        {
+            return @"ReachableViaWiFi,  网络可用 wifi连接";
+        }
+            break ;
+        case 2:
+        {
+            return @"ReachableViaWWAN   网络可用 2G/3G/4G数据连接";
+        }
+            break ;
+            
+    }
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    // 实例化Reachability
+    Reachability *reach = [Reachability reachabilityForInternetConnection];
+    
+    // 获取当前网络状态
+    NetworkStatus currentNetworkStatus = [reach currentReachabilityStatus];
+    
+    UIAlertView *alter = [[UIAlertView alloc]initWithTitle:@"判断网络状态" message:[self networkStatusWith:currentNetworkStatus] delegate:self cancelButtonTitle:@"朕知道了" otherButtonTitles:nil, nil];
+    [alter show];
     
     // 初始化Window
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
@@ -74,6 +110,7 @@
     // Override point for customization after application launch.
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
